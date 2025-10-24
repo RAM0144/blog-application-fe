@@ -22,9 +22,11 @@ const BlogCard = (props) => {
             <h3 className="card-title">{props.title}</h3>
             <h4 className="card-subtitle mb-2">By {props.author}</h4>
             <p className="card-text">{props.content}</p>
-                <button className="btn btn-outline-primary btn-sm m-2" onClick={handleEdit}>Edit</button>
+
+                 <button className="btn btn-outline-primary btn-sm m-2" onClick={handleEdit}>Edit</button>
 
                  <button className="btn btn-outline-primary btn-sm m-2" onClick={()=> props.removeBlog(props.id)}>Delete</button>    
+           
            </div>
         </div>
     )

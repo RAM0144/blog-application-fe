@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BlogCard from "../components/BlogCard";
 import { getAllBlogs, deleteBlog } from "../apis/axios";
+import Loder from "../components/Loder";
 // const blogPosts = [
 //     {
 //       title: 'How to Learn React',
@@ -22,6 +23,7 @@ import { getAllBlogs, deleteBlog } from "../apis/axios";
 
 const BlogList = () => {
     const[blog, setBlog] = useState([])
+    const[loading, setLoading] = useState(true)
 
     const removeBlog= async (blodId) => {
        try {
@@ -37,6 +39,7 @@ const BlogList = () => {
      try {
        const blogData = await getAllBlogs()
         setBlog(blogData.blogs)
+        setLoading(false)
      } catch (error) {
        console.log("error fetching", error)
      }
@@ -45,6 +48,11 @@ const BlogList = () => {
     useEffect(() => {
       loadBlog()
     },[])
+
+
+    if(loading){
+      return <Loder />
+    }
 
     return(
        <div className="container mt-auto">
