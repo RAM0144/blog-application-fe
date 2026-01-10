@@ -1,7 +1,7 @@
 # React + Vite
 # 📝 Blog App
 
-A simple full-stack blog application built using **React** for the frontend and **Axios** for API integration. It allows users to create, view, edit, and delete blog posts.
+A full-stack blog application built using **React** for the frontend and **Axios** for API integration. It allows users to create, view, search, edit, and delete blog posts.
 
 ---
 
@@ -9,6 +9,7 @@ A simple full-stack blog application built using **React** for the frontend and 
 
 -  Create a new blog post (Title, Author, Content)
 -  View all blog posts
+-  Search blogs by title
 -  Edit existing blogs
 -  Delete blog posts
 -  Backend API integration using Axios
@@ -17,17 +18,24 @@ A simple full-stack blog application built using **React** for the frontend and 
 ---
 
 ## 🧰 Tech Stack
-
 - **Frontend:** React.js, Redux, Bootstrap  
-- **Backend:** Node.js, Express.js, MongoDB  
-- **Authentication:** JWT (JSON Web Tokens)
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB    
+- **Authentication:** JWT (JSON Web Tokens) + bcrypt 
+- **API Client:** Axios  
 
+---
+
+## Authentication
+- User registration & login
+- Password hashing using bcrypt
+- JWT based authentication
+- Protected routes for dashboard access
 
 ---
 
 ## Setup Instructions
-
-1. Clone the repo  
+1. Clone the repository 
 2. `cd frontend` & `npm install`  
 3. `npm run dev` (to start frontend)  
 4. `cd backend` & `npm install`  
@@ -36,7 +44,6 @@ A simple full-stack blog application built using **React** for the frontend and 
 ---
 
 ## Author
-
 Ram Kumar  
 Email: ram440163@gmail.com  
 GitHub: [RAM0144](https://github.com/RAM0144)  

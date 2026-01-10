@@ -15,10 +15,16 @@ instance.interceptors.request.use((req) => {
   return req
 })
 
-const getAllBlogs = async () =>{
-   const response = await instance.get("/blogs")
-   return response.data
+// const getAllBlogs = async () =>{
+//    const response = await instance.get("/blogs")
+//    return response.data
+// }
+
+const getAllBlogs = async(search = "") => {
+  const response = await instance.get(`/blogs?search=${search}`)
+  return response.data
 }
+
 
 const getBlog = async (blogId) => {
     const response = await instance.get(`/blogs/${blogId}`)
